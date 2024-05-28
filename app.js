@@ -10,7 +10,7 @@ app.use(express.static('./public'));
 app.use(express.json()) // Parse JSON req
 
 
-app.use('/task-manager', tasks) // Routes
+app.use('/api/v1/tasks', tasks) // Routes
 app.use(unmatchedRoutes) // Middleware: To Handle routes which we have not specified
 app.use(errorHandler) // To handle unknown errors(default errors)
 const PORT = process.env.PORT
